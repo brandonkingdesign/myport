@@ -1,0 +1,387 @@
+/*
+
+Kirby Starterkit
+
+Author: Bastian Allgeier / Sascha Lack
+URL:    http://getkirby.com
+Email:  support@getkirby.com
+
+*/
+
+
+/* Caslon Pro Italic
+-------------------------------------------------- */
+@font-face {
+  font-family: 'Adobe-Caslon-Pro';
+  font-style: italic, oblique;
+  src: url(../fonts/Adobe-Caslon-Pro-Italic.ttf) format('truetype');
+}
+
+
+/* Reset
+-------------------------------------------------- */
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, nav, section, summary {
+  display: block;
+}
+
+
+/* Pix
+-------------------------------------------------- */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+
+/* Links
+-------------------------------------------------- */
+a {
+  color: #000;
+  text-decoration: none;
+  transition: color .3s, background .3s, border .3s;
+}
+a:hover {
+  color: #d1c674;
+}
+
+
+/* Clearfix
+-------------------------------------------------- */
+.cf:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+
+/* Site
+-------------------------------------------------- */
+html {
+  height: 101%;
+  font-family: "Muli", sans-serif;
+  font-weight: 400;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+body {
+  width: 100%;
+  margin: 0 auto;
+  line-height: 1.5em;
+  /*padding: 1.5em;*/
+  background: #f7f7f7;
+  color: #222;
+}
+
+
+/* Header
+-------------------------------------------------- */
+.header {
+  border-bottom: 2px solid #a49262;
+  height: 110px;
+  background-image: url(../images/crosshatch2.svg);
+  padding: 0px 30px;
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+}
+.logo {
+  display: block;
+  margin-top: 35px;
+}
+.logo img {
+  width: 5em;
+}
+
+
+/* Navigation
+-------------------------------------------------- */
+.logo {
+  float: left;
+}
+
+.menu {
+  padding-top: 40px;
+  float: right;
+  height: 100%;
+}
+
+.menu a {
+  display: block;
+  color: #45484b;
+  text-transform: uppercase;
+  font-size: .8125em;
+  letter-spacing: 0.2em;
+}
+.menu a:hover {
+  color: #b2b6ba;
+  text-decoration: none;
+}
+.menu .active {
+  color: #a49262;
+}
+.menu li {
+  list-style: none;
+  margin: 0 45px;
+}
+.menu > li {
+  position: relative;
+  float: left;
+  height: 100%;
+}
+.menu > li > a {
+  padding: .35em 0;
+  border: none;
+  font-weight: 600;
+}
+
+.menu > li:first-child {
+margin-left: 0px;
+}
+.menu > li:last-child {
+margin-right: 0px;
+}
+.menu > li:hover .submenu {
+  display: block;
+}
+.menu .selectedmarker {
+  height: 0px;
+  width: 100%;
+  background-color: #a49262;
+  position: absolute;
+  bottom: 0px;
+  z-index: 7;
+  -webkit-transition: height .2s; 
+  -moz-transition: height .2s; 
+  -ms-transition: height .2s; 
+  -o-transition: height .2s; 
+  transition: height .2s;
+}
+.menu .active + .selectedmarker {
+  height: 7px;
+}
+
+.menu a:hover + .selectedmarker {
+  height: 7px;
+}
+
+/* Headings
+-------------------------------------------------- */
+h1 {
+  font-size: 2em;
+  line-height: 1.25em;
+  font-weight: 400;
+  margin-bottom: .5em;
+}
+h2 {
+  font-size: 2em;
+  line-height: 1.25em;
+  font-weight: 300;
+  margin-bottom: .5em;
+  color: red;
+}
+h3 {
+  font-size: 1.4em;
+  line-height: 1.5em;
+  font-weight: 400;
+  margin-bottom: .5em;
+}
+h4 {
+  font-size: 1.125em;
+  font-weight: 600;
+  line-height: 1.5em;
+  margin-bottom: .5em;
+  color: red;
+}
+h1 a, h2 a, h3 a, h4 a {
+  color: inherit;
+  border: 0 !important;
+}
+
+
+
+/* Main
+-------------------------------------------------- */
+.main {
+  padding-bottom: 1.5em;
+  border-bottom: none;
+  margin: 0px 30px;
+  text-align: left;
+}
+.main hr {
+  margin: 3em 0;
+  height: 2px;
+  background: #ddd;
+}
+/*.main p,
+.main figure,
+.main ul,
+.main ol {
+  margin-bottom: 1.5em;
+}*/
+.main a {
+  border-bottom: 2px solid #b2b6ba;
+}
+.main a:hover {
+  border-color: #45484b;
+}
+
+/* Text blocks */
+.text ul,
+.text ol {
+  margin-left: 1em;
+}
+
+/* Project meta
+-------------------------------------------------- */
+.meta {
+  margin-bottom: 1.5em;
+}
+.meta li {
+  float: left;
+  list-style: none;
+  margin-right: 2em;
+  color: red;
+}
+.meta li b {
+  font-weight: 400;
+  color: #000;
+  padding-right: .25em;
+}
+
+
+/* Project teaser
+-------------------------------------------------- */
+.teaser {
+  list-style: none;
+  position: relative;
+}
+.teaser li {
+  float: left;
+  list-style: none;
+  margin: 15px;
+}
+
+  /*---------RESPONSIVE------------*/
+
+@media screen and (min-width: 1000px) {
+  .teaser li:nth-child(4n) {
+      margin-right: 0;
+    }
+
+  .teaser li:nth-child(4n+1) {
+    margin-left: 0;
+  }
+
+  li:nth-child(-n+4) {
+    margin-top: 0px;   
+  }
+}
+
+
+@media screen and (min-width: 769px) and (max-width: 999px) {
+  .teaser li:nth-child(3n+1) {
+    margin-left: 0;
+  }
+
+  .teaser li:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  li:nth-child(-n+3) {
+    margin-top: 0px;   
+  }
+}
+
+@media screen and (min-width: 501px) and (max-width: 768px) {
+
+  .teaser li:nth-child(2n) {
+    margin-right: 0;
+  }
+
+  .teaser li:nth-child(2n+1) {
+    margin-left: 0;
+  }
+
+  li:nth-child(-n+2) {
+    margin-top: 0px;   
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .teaser li {
+    margin: 15px;
+  }
+  li:first-child {
+    margin-top: 0px;   
+  }
+}
+
+
+/* Next/Prev nav
+-------------------------------------------------- */
+.nextprev {
+  padding: 1em 0;
+}
+.nextprev a {
+  border: 0;
+}
+.nextprev .prev {
+  float: left;
+}
+.nextprev .next {
+  float: right;
+}
+
+
+/* Footer
+-------------------------------------------------- */
+.homefooter, .footer {
+  position: relative;
+  /*bottom: 0;*/
+  z-index: 100000;
+  background: #f7f7f7;  
+  width: 100%;
+  padding: 20px 30px 25px;
+  font-size: .9em;
+  color: #b2b6ba;
+  font-family: 'Adobe-Caslon-Pro';
+}
+
+.footer {
+  top: 110px;
+}
+
+.homefooter {
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.copyright {
+  margin-top: 10px;
+  float: left;
+}
+.social {
+  float: right;
+}
+
+.social ul li {
+  list-style: none;
+  float: left;
+  margin-left: 26px;
+}
+
+
+

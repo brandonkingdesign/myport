@@ -1,0 +1,11 @@
+Title: About
+
+----
+
+Text: Hi, my name is Brandon King and I’m a designer with an affinity for UI and web design. My love for beautiful, well-crafted products led me to the design industry.
+<br>
+
+Being a curious person, I have a need to understand how things work. <span class="nowrap">I am</span> naturally drawn to tech and web design as a result of this. My goal is to work on projects that matter to people and make them as enjoyable as possible.
+<br>
+
+On the weekends I like to get together with the fam to settle Catan. <span class="nowrap">I keep</span> a steady eye on my favorite soccer teams as well as spend an inordinate amount of time managing my fantasy basketball team. As an obsessive learner, I’m a sucker for a good book and listen to A LOT of podcasts. I currently reside in Salt Lake City, Utah with my wife Brittany and hound Gunther.
